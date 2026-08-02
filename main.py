@@ -50,7 +50,7 @@ def process_pdf(sender_phone: str, media_id: str):
     if os.path.exists(pdf_path):
         os.remove(pdf_path)
         
-    dashboard_link = f"https://your-future-website.com/dashboard?user={sender_phone}"
+    dashboard_link = f"https://clariti-ai-health-analytics.vercel.app/?user={sender_phone}"
     
     success_msg = f"Analysis Complete!\n\nI have securely logged your health data.\nView your historical health graph here:\n{dashboard_link}"
     send_whatsapp_message(sender_phone, success_msg)
