@@ -22,7 +22,7 @@ function App() {
   const [aiSummary, setAiSummary] = useState(null);
   const [loadingSummary, setLoadingSummary] = useState(false);
 
-  // Fetch Data from Python Backend
+  // Fetch Data from Python Backend (Live on Render)
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const user = params.get("user");
@@ -36,7 +36,7 @@ function App() {
     setUserPhone(user);
 
     fetch(
-      `http://127.0.0.1:8000/api/health_data?user=${encodeURIComponent(user)}`,
+      `https://clariti-backend.onrender.com/api/health_data?user=${encodeURIComponent(user)}`,
     )
       .then((res) => res.json())
       .then((result) => {
@@ -72,14 +72,14 @@ function App() {
       });
   }, []);
 
-  // Call the AI Insights API
+  // Call the AI Insights API (Live on Render)
   const handleGenerateSummary = async () => {
     setLoadingSummary(true);
     setAiSummary(null);
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/api/generate_summary",
+        "https://clariti-backend.onrender.com/api/generate_summary",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -99,17 +99,7 @@ function App() {
     }
     setLoadingSummary(false);
   };
-
-  // Loading and Error States
-  if (loading)
-    return (
-      <div className="loading-container">
-        <div className="spinner"></div>
-        <h2>Syncing with AI...</h2>
-      </div>
-    );
-
-  // THE NEW MARKETING LANDING PAGE!
+ 
   if (error === "empty") {
     return (
       <div
