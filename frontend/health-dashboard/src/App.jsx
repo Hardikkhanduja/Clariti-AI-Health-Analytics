@@ -99,7 +99,8 @@ function App() {
     }
     setLoadingSummary(false);
   };
- 
+
+  // THE NEW MARKETING LANDING PAGE!
   if (error === "empty") {
     return (
       <div
@@ -108,392 +109,174 @@ function App() {
           display: "flex",
           flexDirection: "column",
           background: "#ffffff",
-          position: "relative",
-          overflow: "hidden",
         }}
       >
-        <div className="bg-blob" style={{ left: "30%", top: "-200px" }}></div>
-
         {/* Navigation Bar */}
         <nav
-          className="nav-bar"
           style={{
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
             padding: "20px 40px",
-            background: "rgba(255,255,255,0.8)",
+            background: "rgba(255,255,255,0.9)",
             backdropFilter: "blur(20px)",
-            borderBottom: "1px solid #f2f2f7",
             position: "sticky",
             top: 0,
             zIndex: 100,
           }}
         >
-          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
             <img
               src="/favicon.png"
               alt="Clariti Logo"
-              style={{ width: "28px", height: "28px" }}
+              style={{ width: "24px", height: "24px" }}
             />
             <span
               style={{
-                fontWeight: 800,
-                fontSize: "20px",
-                color: "#1c1c1e",
+                fontWeight: 700,
+                fontSize: "21px",
+                color: "#000000",
                 letterSpacing: "-0.5px",
               }}
             >
-              Clariti
+              Clariti.
             </span>
           </div>
-          <div style={{ display: "flex", gap: "20px", alignItems: "center" }}>
-            <a
-              href="https://wa.me/15552020389"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                background: "#f2f2f7",
-                color: "#1c1c1e",
-                padding: "8px 16px",
-                borderRadius: "20px",
-                fontSize: "14px",
-                fontWeight: 600,
-                textDecoration: "none",
-                transition: "background 0.2s ease",
-              }}
-              onMouseOver={(e) => (e.target.style.background = "#e5e5ea")}
-              onMouseOut={(e) => (e.target.style.background = "#f2f2f7")}
-            >
-              Try for Free
-            </a>
-          </div>
+          <a
+            href="https://wa.me/15552020389"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "#0066cc",
+              fontSize: "15px",
+              fontWeight: 400,
+              textDecoration: "none",
+            }}
+            onMouseOver={(e) => (e.target.style.textDecoration = "underline")}
+            onMouseOut={(e) => (e.target.style.textDecoration = "none")}
+          >
+            Start free trial &gt;
+          </a>
         </nav>
 
         {/* HERO SECTION */}
         <div
-          className="hero-split"
           style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            padding: "80px 40px 40px 40px",
-            maxWidth: "1400px",
+            textAlign: "center",
+            padding: "120px 20px 0px 20px",
+            maxWidth: "1000px",
             margin: "0 auto",
             position: "relative",
             zIndex: 10,
-            gap: "40px",
-            flexWrap: "wrap",
           }}
         >
-          {/* Left Column */}
+          <h1 className="mac-hero-title">
+            Your blood work.
+            <br />
+            Demystified.
+          </h1>
+          <p className="mac-hero-subtitle" style={{ marginBottom: "40px" }}>
+            Forward your lab reports to our secure AI on WhatsApp. Receive a
+            clinical, interactive health dashboard in seconds.
+          </p>
+          <a
+            href="https://wa.me/15552020389"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mac-button"
+          >
+            Try it on WhatsApp
+          </a>
+        </div>
+
+        {/* EDGE-TO-EDGE PRODUCT MOCKUP */}
+        <div
+          style={{
+            width: "100%",
+            maxWidth: "1400px",
+            margin: "0 auto",
+            padding: "80px 20px 0 20px",
+            textAlign: "center",
+          }}
+        >
           <div
-            className="hero-left"
             style={{
-              flex: "1",
-              minWidth: "400px",
-              maxWidth: "600px",
-              textAlign: "left",
+              display: "inline-block",
+              border: "1px solid #e5e5ea",
+              borderRadius: "12px",
+              overflow: "hidden",
+              boxShadow: "0 20px 60px rgba(0,0,0,0.08)",
             }}
           >
             <div
               style={{
-                display: "inline-flex",
+                background: "#f2f2f7",
+                height: "40px",
+                display: "flex",
                 alignItems: "center",
-                gap: "8px",
-                background: "rgba(0, 122, 255, 0.05)",
-                color: "#007aff",
-                padding: "8px 16px",
-                borderRadius: "30px",
-                fontSize: "13px",
-                fontWeight: 700,
-                letterSpacing: "0.5px",
-                marginBottom: "24px",
-                border: "1px solid rgba(0, 122, 255, 0.1)",
+                padding: "0 16px",
+                borderBottom: "1px solid #e5e5ea",
               }}
             >
-              THE NEW STANDARD IN BLOOD WORK
-            </div>
-
-            <h1
-              className="hero-title"
-              style={{
-                fontSize: "72px",
-                fontWeight: 800,
-                color: "#1c1c1e",
-                lineHeight: "1.05",
-                letterSpacing: "-2.5px",
-                marginBottom: "24px",
-              }}
-            >
-              Understand your blood tests.
-              <br />
-              <span className="gradient-text">In seconds.</span>
-            </h1>
-
-            <p
-              style={{
-                fontSize: "20px",
-                color: "#8e8e93",
-                lineHeight: "1.6",
-                marginBottom: "48px",
-                fontWeight: 400,
-              }}
-            >
-              Forward your lab results to our secure AI on WhatsApp, and receive
-              a beautiful, personalized health dashboard instantly. No apps to
-              download.
-            </p>
-
-            <a
-              href="https://wa.me/15552020389"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                background: "#1c1c1e",
-                color: "#ffffff",
-                padding: "18px 48px",
-                borderRadius: "40px",
-                fontSize: "18px",
-                fontWeight: 600,
-                textDecoration: "none",
-                boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
-                transition: "all 0.2s ease",
-              }}
-              onMouseOver={(e) => {
-                e.currentTarget.style.transform = "translateY(-2px)";
-                e.currentTarget.style.boxShadow =
-                  "0 15px 40px rgba(0,0,0,0.15)";
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.transform = "translateY(0)";
-                e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.1)";
-              }}
-            >
-              Start for Free on WhatsApp
-            </a>
-          </div>
-
-          {/* Right Column */}
-          <div
-            className="hero-right"
-            style={{
-              flex: "1.2",
-              position: "relative",
-              perspective: "1200px",
-              minWidth: "500px",
-              marginTop: "20px",
-            }}
-          >
-            <div
-              className="dashboard-mockup-container"
-              style={{ transform: "translateX(20px)" }}
-            >
-              <div className="browser-top-bar">
-                <div className="browser-dot dot-red"></div>
-                <div className="browser-dot dot-yellow"></div>
-                <div className="browser-dot dot-green"></div>
-                <div
-                  style={{ flex: 1, display: "flex", justifyContent: "center" }}
-                >
-                  <div
-                    style={{
-                      background: "#ffffff",
-                      padding: "4px 80px",
-                      borderRadius: "6px",
-                      fontSize: "12px",
-                      color: "#8e8e93",
-                      fontWeight: 500,
-                      border: "1px solid #e5e5ea",
-                      boxShadow: "0 1px 3px rgba(0,0,0,0.02)",
-                    }}
-                  >
-                    clariti.health/dashboard
-                  </div>
-                </div>
-              </div>
-
-              <img
-                src="/mockup.png"
-                alt="Clariti Dashboard Mockup"
-                style={{
-                  width: "100%",
-                  display: "block",
-                  objectFit: "cover",
-                  objectPosition: "top",
-                }}
-                onError={(e) => {
-                  e.target.style.display = "none";
-                  e.target.nextSibling.style.display = "block";
-                }}
-              />
               <div
                 style={{
-                  display: "none",
-                  padding: "100px 20px",
-                  color: "#8e8e93",
-                  fontSize: "18px",
-                  textAlign: "center",
+                  width: "12px",
+                  height: "12px",
+                  borderRadius: "50%",
+                  background: "#ff3b30",
+                  marginRight: "8px",
                 }}
-              >
-                [ Make sure you saved mockup.png in the public folder to see the
-                image here! ]
-              </div>
+              ></div>
+              <div
+                style={{
+                  width: "12px",
+                  height: "12px",
+                  borderRadius: "50%",
+                  background: "#ffcc00",
+                  marginRight: "8px",
+                }}
+              ></div>
+              <div
+                style={{
+                  width: "12px",
+                  height: "12px",
+                  borderRadius: "50%",
+                  background: "#34c759",
+                }}
+              ></div>
             </div>
-
-            <div
-              style={{
-                position: "absolute",
-                top: 0,
-                bottom: 0,
-                right: -50,
-                width: "100px",
-                background:
-                  "linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1))",
-                pointerEvents: "none",
-              }}
-            ></div>
+            <img
+              src="/mockup.png"
+              alt="Dashboard"
+              style={{ width: "100%", maxWidth: "1200px", display: "block" }}
+            />
           </div>
         </div>
 
-        {/* Feature Grid */}
-        <div
-          style={{
-            position: "relative",
-            zIndex: 20,
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: "30px",
-            width: "100%",
-            maxWidth: "1200px",
-            margin: "0 auto",
-            padding: "40px 40px 80px 40px",
-          }}
-        >
-          <div
-            className="apple-card"
-            style={{
-              padding: "32px",
-              background: "rgba(255,255,255,0.8)",
-              backdropFilter: "blur(20px)",
-            }}
-          >
-            <div
-              style={{
-                width: "48px",
-                height: "48px",
-                borderRadius: "12px",
-                background: "#f0f8ff",
-                color: "#007aff",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "24px",
-                fontWeight: "bold",
-                marginBottom: "20px",
-              }}
-            >
-              1
-            </div>
-            <h3
-              style={{
-                color: "#1c1c1e",
-                marginBottom: "12px",
-                fontSize: "20px",
-              }}
-            >
-              Upload PDF
-            </h3>
-            <p
-              style={{ color: "#8e8e93", fontSize: "16px", lineHeight: "1.6" }}
-            >
-              Just drop your raw lab report directly into our secure WhatsApp
-              chat.
+        {/* BORDERLESS FEATURE GRID */}
+        <div className="mac-feature-grid">
+          <div>
+            <div className="mac-feature-num">1</div>
+            <h3 className="mac-feature-title">Send PDF</h3>
+            <p className="mac-feature-desc">
+              Drop your raw lab report directly into our secure WhatsApp chat.
+              No apps required.
             </p>
           </div>
-          <div
-            className="apple-card"
-            style={{
-              padding: "32px",
-              background: "rgba(255,255,255,0.8)",
-              backdropFilter: "blur(20px)",
-            }}
-          >
-            <div
-              style={{
-                width: "48px",
-                height: "48px",
-                borderRadius: "12px",
-                background: "#f0f8ff",
-                color: "#007aff",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "24px",
-                fontWeight: "bold",
-                marginBottom: "20px",
-              }}
-            >
-              2
-            </div>
-            <h3
-              style={{
-                color: "#1c1c1e",
-                marginBottom: "12px",
-                fontSize: "20px",
-              }}
-            >
-              AI Processing
-            </h3>
-            <p
-              style={{ color: "#8e8e93", fontSize: "16px", lineHeight: "1.6" }}
-            >
-              Our clinical AI standardizes and graphs every single biomarker
+          <div>
+            <div className="mac-feature-num">2</div>
+            <h3 className="mac-feature-title">AI Processing</h3>
+            <p className="mac-feature-desc">
+              Our clinical AI standardizes and maps every single biomarker with
+              extreme accuracy.
+            </p>
+          </div>
+          <div>
+            <div className="mac-feature-num">3</div>
+            <h3 className="mac-feature-title">Get Insights</h3>
+            <p className="mac-feature-desc">
+              Receive a highly actionable, historical health dashboard
               instantly.
-            </p>
-          </div>
-          <div
-            className="apple-card"
-            style={{
-              padding: "32px",
-              background: "rgba(255,255,255,0.8)",
-              backdropFilter: "blur(20px)",
-            }}
-          >
-            <div
-              style={{
-                width: "48px",
-                height: "48px",
-                borderRadius: "12px",
-                background: "#f0f8ff",
-                color: "#007aff",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "24px",
-                fontWeight: "bold",
-                marginBottom: "20px",
-              }}
-            >
-              3
-            </div>
-            <h3
-              style={{
-                color: "#1c1c1e",
-                marginBottom: "12px",
-                fontSize: "20px",
-              }}
-            >
-              Get Insights
-            </h3>
-            <p
-              style={{ color: "#8e8e93", fontSize: "16px", lineHeight: "1.6" }}
-            >
-              Receive humanized, highly actionable health summaries to improve
-              your life.
             </p>
           </div>
         </div>
@@ -501,37 +284,11 @@ function App() {
         {/* Minimalist Footer */}
         <footer
           style={{
-            borderTop: "1px solid #f2f2f7",
-            padding: "60px 20px 40px 20px",
+            padding: "60px 20px",
             textAlign: "center",
-            marginTop: "auto",
+            background: "#f5f5f7",
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: "8px",
-              marginBottom: "20px",
-            }}
-          >
-            <img
-              src="/favicon.png"
-              alt="Clariti Logo"
-              style={{ width: "20px", height: "20px", opacity: 0.6 }}
-            />
-            <span
-              style={{
-                fontWeight: 700,
-                fontSize: "16px",
-                color: "#8e8e93",
-                letterSpacing: "-0.5px",
-              }}
-            >
-              Clariti Health
-            </span>
-          </div>
           <div
             style={{
               display: "flex",
@@ -543,48 +300,39 @@ function App() {
             <a
               href="mailto:support@clariti.health"
               style={{
-                color: "#8e8e93",
+                color: "#515154",
                 textDecoration: "none",
-                fontSize: "14px",
+                fontSize: "13px",
                 fontWeight: 500,
-                transition: "color 0.2s",
               }}
-              onMouseOver={(e) => (e.target.style.color = "#1c1c1e")}
-              onMouseOut={(e) => (e.target.style.color = "#8e8e93")}
             >
               Support
             </a>
             <a
               href="#"
               style={{
-                color: "#8e8e93",
+                color: "#515154",
                 textDecoration: "none",
-                fontSize: "14px",
+                fontSize: "13px",
                 fontWeight: 500,
-                transition: "color 0.2s",
               }}
-              onMouseOver={(e) => (e.target.style.color = "#1c1c1e")}
-              onMouseOut={(e) => (e.target.style.color = "#8e8e93")}
             >
               Privacy Policy
             </a>
             <a
               href="#"
               style={{
-                color: "#8e8e93",
+                color: "#515154",
                 textDecoration: "none",
-                fontSize: "14px",
+                fontSize: "13px",
                 fontWeight: 500,
-                transition: "color 0.2s",
               }}
-              onMouseOver={(e) => (e.target.style.color = "#1c1c1e")}
-              onMouseOut={(e) => (e.target.style.color = "#8e8e93")}
             >
               Terms of Service
             </a>
           </div>
-          <p style={{ color: "#c7c7cc", fontSize: "13px", fontWeight: 500 }}>
-            &copy; {new Date().getFullYear()} Clariti Health. All rights
+          <p style={{ color: "#86868b", fontSize: "13px", fontWeight: 400 }}>
+            &copy; {new Date().getFullYear()} Clariti Health Inc. All rights
             reserved.
           </p>
         </footer>
